@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Plain JS Starter Kit</title>
+    <title>Vue</title>
     <!-- whatever stylesheets starts -->
     <link
       rel="stylesheet"
@@ -15,16 +15,13 @@
     <!-- endinject -->
   </head>
   <body>
-    <button
-      class="btn btn-primary"
-      data-toggle="tooltip"
-      data-placement="right"
-      title="Tooltip on right"
-    >
-      Hooray !!
-    </button>
+    <div id="card">
+      <header>{{ title }}</header>
+      <div v-html="content"></div>
+    </div>
     <!-- whatever js starts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- whatever js ends -->
     <!-- inject:js -->
