@@ -15,6 +15,9 @@ var card = new Vue({
         });
         input.value = "";
       }
+    },
+    deleteItem: function(index) {
+      this.items.splice(index, 1);
     }
   }
 });
