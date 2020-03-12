@@ -17,12 +17,20 @@
   <body>
     <div id="card">
       <header>{{ title }}</header>
-      <div v-html="content"></div>
+      <article v-html="content"></article>
+      <div>
+        <input id="itemForm" type="text" v-on:keypress.enter="addItem" />
+        <button v-on:click="addItem">Add Dinosaur</button>
+      </div>
+      <ul>
+        <li v-for="item in items">
+          {{item.text}}
+        </li>
+      </ul>
     </div>
     <!-- whatever js starts -->
     <!-- 开发环境版本，包含了有帮助的命令行警告 -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- whatever js ends -->
     <!-- inject:js -->
     <!-- endinject -->
